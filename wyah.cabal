@@ -27,6 +27,18 @@ executable wyah-exe
                      , wyah
   default-language:    Haskell2010
 
+executable calc-exe
+  hs-source-dirs:      src
+  main-is:             Calc.hs
+  other-modules:       Syntax
+                     , Parser
+                     , Eval
+  build-depends:       base
+                     , parsec
+                     , mtl
+                     , haskeline
+  default-language:    Haskell2010
+
 test-suite wyah-test
   type:                exitcode-stdio-1.0
   hs-source-dirs:      test
