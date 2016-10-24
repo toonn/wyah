@@ -1,8 +1,8 @@
-module Parser (
+module CalcParser (
   parseExpr
 ) where
 
-import Syntax
+import CalcSyntax
 
 import Text.Parsec
 import Text.Parsec.String (Parser)

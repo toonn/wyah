@@ -1,4 +1,4 @@
-module Syntax where
+module CalcSyntax where
 
 data Expr
   = Tr

@@ -1,6 +1,6 @@
-module Eval where
+module CalcEval where
 
-import Syntax
+import CalcSyntax
 
 import Data.Maybe
 

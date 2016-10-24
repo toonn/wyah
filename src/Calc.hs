@@ -1,7 +1,7 @@
 module Main where
 
-import Parser
-import Eval
+import CalcParser
+import CalcEval
 
 import Control.Monad.Trans
 import System.Console.Haskeline
