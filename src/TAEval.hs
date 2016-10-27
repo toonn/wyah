@@ -12,7 +12,6 @@ eval1 expr = case expr of
                IsZero Zero -> Just Tr
                IsZero (Succ t) | isNum t -> Just Fl
                IsZero t -> IsZero <$> eval1 t 
-               Succ (Pred t) | isNum t -> Just t
                Succ t -> Succ <$> eval1 t
                Pred Zero -> Just Zero
                Pred (Succ t) | isNum t -> Just t
