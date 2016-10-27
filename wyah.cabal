@@ -54,6 +54,22 @@ executable ulc-exe
                      , containers
   default-language:    Haskell2010
 
+executable tcalc-exe
+  hs-source-dirs:      src
+  main-is:             TA.hs
+  other-modules:       CalcSyntax
+                     , TAParser
+                     , TAEval
+                     , TAPretty
+                     , TACheck
+                     , TAType
+  build-depends:       base
+                     , parsec
+                     , mtl
+                     , haskeline
+                     , pretty
+  default-language:    Haskell2010
+
 test-suite wyah-test
   type:                exitcode-stdio-1.0
   hs-source-dirs:      test
