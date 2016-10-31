@@ -70,6 +70,23 @@ executable tcalc-exe
                      , pretty
   default-language:    Haskell2010
 
+executable stlc-exe
+  hs-source-dirs:      src
+  main-is:             STLC.hs
+  other-modules:       STLCSyntax
+                     , STLCLexer
+                     , STLCParser
+                     , STLCCheck
+                     , STLCPretty
+                     , STLCEval
+  build-depends:       base
+                     , parsec
+                     , mtl
+                     , haskeline
+                     , pretty
+                     , containers
+  default-language:    Haskell2010
+
 test-suite wyah-test
   type:                exitcode-stdio-1.0
   hs-source-dirs:      test
