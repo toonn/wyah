@@ -87,6 +87,45 @@ executable stlc-exe
                      , containers
   default-language:    Haskell2010
 
+executable poly-exe
+  hs-source-dirs:      src
+  main-is:             Poly.hs
+  other-modules:       PolySyntax
+                     , PolyType
+                     , PolyLexer
+                     , PolyParser
+                     , PolyPretty
+                     , PolyInfer
+                     , PolyEval
+  build-depends:       base
+                     , parsec
+                     , mtl
+                     , repline
+                     , pretty
+                     , containers
+                     , text
+  default-language:    Haskell2010
+
+executable polyc-exe
+  hs-source-dirs:      src
+  main-is:             PolyC.hs
+  other-modules:       PolySyntax
+                     , PolyType
+                     , PolyLexer
+                     , PolyParser
+                     , PolyCPretty
+                     , PolyCInfer
+                     , PolyEval
+                     , PolyCEnv
+  build-depends:       base
+                     , parsec
+                     , mtl
+                     , repline
+                     , pretty
+                     , containers
+                     , text
+  default-language:    Haskell2010
+
 test-suite wyah-test
   type:                exitcode-stdio-1.0
   hs-source-dirs:      test
